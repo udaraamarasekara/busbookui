@@ -8,10 +8,10 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 function Landing() {
   
   return (
-   <>
-    <Link to="/login">Login</Link>
-    <Link to="/registerCommutor">Register</Link>
-   </>
+   <div style={{display:'flex',flexDirection:'row',width:'100vw',height:'100vh', justifyContent:'center',alignItems:'center'}}>
+    <Link className='Button' to="/login">Login</Link>
+    <Link className='Button' to="/registerCommutor">Register</Link>
+   </div>
   );
 }
 

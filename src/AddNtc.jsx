@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "./RegistrationForm.module.css";
 import api from "./Api";
 import { Link } from "react-router-dom";
-const Register = () => {
+const AddNtc = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -12,7 +12,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await api.post("/guest/register", formData);
+      const response = await api.post("/admin/register-ntc", formData);
       setResponseMessage(`Success: ${response.data.message}`);
     } catch (error) {
       if (error.response) {
@@ -81,4 +81,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default AddNtc;

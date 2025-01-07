@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "./RegistrationForm.module.css";
 import api from "./Api";
 import { Link } from "react-router-dom";
-const Register = () => {
+const AddBusOwner = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -12,7 +12,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await api.post("/guest/register", formData);
+      const response = await api.post("/auth/ntc/register-bus-owner", formData);
       setResponseMessage(`Success: ${response.data.message}`);
     } catch (error) {
       if (error.response) {
@@ -76,9 +76,8 @@ const Register = () => {
       </button>
     </form>
       {responseMessage && <p>{responseMessage}</p>}
-      <Link styles={{backgroundColor:" #007bff"}} to='/login'>Login now</Link>
    </>   
   );
 };
 
-export default Register;
+export default AddBusOwner;
