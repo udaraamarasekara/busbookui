@@ -10,7 +10,7 @@ function Landing() {
   return (
    <div style={{display:'flex',flexDirection:'row',width:'100vw',height:'100vh', justifyContent:'center',alignItems:'center'}}>
     <Link className='Button' to="/login">Login</Link>
-    <Link className='Button' to="/registerCommutor">Register</Link>
+    <Link className='Button' to="/register">Register</Link>
    </div>
   );
 }
