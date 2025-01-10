@@ -48,8 +48,9 @@ const BusOwnerBookings = () => {
               {data.length > 0 ? (
                 data.map((item) => (
                   <tr key={item.id}>
-                    <td>{item.user}</td>
                     <td>{item.seat}</td>
+                    <td>{item.seat}</td>
+                    <td>{item.user}</td>
                   
                   </tr>
                 ))
