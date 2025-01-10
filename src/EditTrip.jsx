@@ -141,7 +141,7 @@ const EditTrip = () => {
           <option value="" disabled>
           </option>
           {busses?.map(bus=>{
-           return <option key={bus?.id} value={bus?.busno}>
+           return <option key={bus?.id} value={bus?.id}>
             {bus?.busno}
             </option>
           })
